@@ -4,8 +4,6 @@ Juego desarrollado en pygame basado en el juego del ahorcado con tres niveles di
 - Nivel Bajo: El juegador cuenta con 18 intentos.
 - Nivel Medio: El jugador cuenta con 12 intentos.
 - Nivel Alto: El jugador cuenta con 6 intentos.
-El código se encuentra debidamente comentado con la lógica usada para los archivos: main.py y button.py.
-Además, el programa requiero arhivos multimedia para la experiencia del juego (imágenes y audios).
 
 ## Instalación del juego
 1. Descargar el repositorio [click aquí] (https://codeload.github.com/ivanrcas/ahorcado-game/zip/refs/heads/main) o clonar repositorio desde computadora local desde tu cuenta github.
@@ -14,6 +12,7 @@ Además, el programa requiero arhivos multimedia para la experiencia del juego (
 pip install pygame
 ```
 4. Ejecutar main.py
+5. El código se encuentra debidamente comentado con la lógica usada para los archivos: main.py y button.py. Además, el programa requiero arhivos multimedia para la experiencia del juego (imágenes y audios).
 
 ## Funcionalidades del Juego del Ahorcado
 1. Selección de Palabra Secreta: El juego elige una palabra secreta al azar que el jugador debe adivinar.
