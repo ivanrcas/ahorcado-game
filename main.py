@@ -9,6 +9,7 @@
 '''
 
 # Impportar librerias y modulo de botón
+from pathlib import Path
 import pygame
 import math
 import random
@@ -20,9 +21,13 @@ WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Ahorcado The Game | Kodland")
 
+# Obtener ruta de directorio actual del proyecto, resolviendo ruta absoluta con Path de pathlib
+ROOT_DIR = Path(__file__).resolve().parent
+
 # Configurar musica de fondo
+music_path = ROOT_DIR / "music" / "music_backgroud_ocarina.mp3"
 pygame.mixer.init()
-pygame.mixer.music.load('ahorcado\\music\\music_backgroud_ocarina.mp3')
+pygame.mixer.music.load(music_path)
 pygame.mixer.music.play(loops = -1)
 
 # Definicion de Configuracion fuentes y tamanos de texto
@@ -57,7 +62,9 @@ def letters_list():
 def images_list():
     images = []
     for i in range(7):
-        image = pygame.image.load("ahorcado\\images\\ahorcado" + str(i) + '.png')
+        temp_filename = "ahorcado" + str(i) + '.png'
+        img_path = ROOT_DIR / "images" / temp_filename
+        image = pygame.image.load(img_path)
         images.append(image)
     return images
 
